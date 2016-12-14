@@ -36,3 +36,21 @@ To run and test the following application:
 4) To run development run `npm start` in parent directory, and it will appear at `http://localhost:8000/index.html`
 
 ## Code Structure
+This [Angular](https://angularjs.org/) app uses an [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern.
+__File:__
+- `bower.json`: Contains the dependencies of the application.
+
+- `package.json`: Contains the commands that `npm` needs to do prior to running in developement mode.
+
+- `bower_components`: The folder generated after the commands `npm install` or `npm start` are run. It contains all dependecies of the application.
+
+- `app/index.html` : Starting page of application, the View of the application. For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages.
+
+- `app/data` : This folder represents the Model of the application. It contains the data that are used in the application.
+
+- `app/js` : The folder containing all javascript files we develop for this application.
+
+- `app/js/services`: Contains the services that recieve data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json)
+
+- `app/js/controllers`: This folder contains the Controllers of the application.
+

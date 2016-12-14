@@ -1,4 +1,6 @@
-## What is this
+# Elsevier Exercise 2016
+
+## Overview
 This application was created for a code exercise by Elsevier, using the JSON graph provided in `app/data`.
 
 __Features:__

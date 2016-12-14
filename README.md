@@ -1,7 +1,7 @@
 # Elsevier Exercise 2016
 
 ## Overview
-This application was created for a code exercise by Elsevier, using the JSON graph provided in `app/data` and deplied on [Amazon AWS](https://aws.amazon.com/).
+This application was created for a code exercise by Elsevier, using the JSON graph provided in `app/data` and deployed on [Amazon AWS](https://aws.amazon.com/).
 
 __Features:__
 

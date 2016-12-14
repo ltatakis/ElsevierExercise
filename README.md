@@ -21,7 +21,7 @@ Given the setup of the server and the ports chosen the app will appear at: `http
 
 Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js` due to the nature of thi deployment. 
 
-### TODO This might need so changing.
+### TODO 
 
 
 

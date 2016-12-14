@@ -12,6 +12,8 @@
   </head>
   <body> 
     <div class="container-fluid">
+      <!-- For multiple view extension add : <div ng-view></div> here.-->
+      <!-- Code below will go into a template. -->
           <div class="row">
             <div class="col-md-2">
               
@@ -28,8 +30,6 @@
               </p>
             </div>
             <div class="col-md-10">
-              <!--Body content-->
-
               <ul class="phones">
                 <li ng-repeat="book in books | filter:query | orderBy:orderProp"
                     class="thumbnail phone-list-item">

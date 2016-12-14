@@ -1,7 +1,7 @@
 # Elsevier Exercise 2016
 
 ## Overview
-This application was created for a code exercise by Elsevier, using the JSON graph provided in `app/data`.
+This application was created for a code exercise by Elsevier, using the JSON graph provided in `app/data` and deplied on [Amazon AWS](https://aws.amazon.com/).
 
 __Features:__
 
@@ -12,10 +12,10 @@ __Features:__
 ## Running
 
 
-### Deployment
+### Deployment on AWS using Tomcat 8.
 
-Currently, this code is deployed using tomcat 8.
-For the deployment of this application, we simply copy the app folder into the webapps section of the tomcat.
+Currently, this code is deployed using [Tomcat 8](https://tomcat.apache.org/download-80.cgi).
+For the deployment of this application, we  copy the app folder into the webapps section of the tomcat.
 We start the tomcat server by running `./catalina.sh start` found in the `tomcat/bin` folder.
 Given the setup of the server and the ports chosen the app will appear at: `http://example.com:port/app`
 
@@ -25,7 +25,7 @@ Notes: There might be issues with the application not finding the data file, def
 
 
 
-### Development 
+### Development mode using Node.js.
 
 To run and test the following application:
 
@@ -39,7 +39,8 @@ To run and test the following application:
 
 ## Code Structure
 This [Angular](https://angularjs.org/) app uses an [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern.
-__File:__
+
+__File structure:__
 - `bower.json`: Contains the dependencies of the application.
 
 - `package.json`: Contains the commands that `npm` needs to do prior to running in developement mode.

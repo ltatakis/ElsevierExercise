@@ -15,7 +15,7 @@ __Features:__
 ### Deployment on AWS using Tomcat 8.
 
 Currently, this code is deployed using [Tomcat 8](https://tomcat.apache.org/download-80.cgi).
-For the deployment of this application, we  copy the app folder into the webapps section of the tomcat.
+For the deployment of this application, we copy the app folder into the webapps section of the tomcat.
 We start the tomcat server by running `./catalina.sh start` found in the `tomcat/bin` folder.
 Given the setup of the server and the ports chosen the app will appear at: `http://example.com:port/app`
 
@@ -43,17 +43,16 @@ This [Angular](https://angularjs.org/) app uses an [MVC](https://en.wikipedia.or
 __File structure:__
 - `bower.json`: Contains the dependencies of the application.
 
-- `package.json`: Contains the commands that `npm` needs to do prior to running in developement mode.
+- `package.json`: Contains the commands that `npm` needs to do prior to running in development mode.
 
-- `bower_components`: The folder generated after the commands `npm install` or `npm start` are run. It contains all dependecies of the application.
+- `bower_components`: The folder generated after the commands `npm install` or `npm start` are run. It contains all dependencies of the application.
 
-- `app/index.html` : Starting page of application, the View of the application. For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages.
+- `app/index.html` : Starting page of the application, the View of the application. For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages.
 
 - `app/data` : This folder represents the Model of the application. It contains the data that are used in the application.
 
 - `app/js` : The folder containing all javascript files we develop for this application.
 
-- `app/js/services`: Contains the services that recieve data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json)
+- `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json)
 
 - `app/js/controllers`: This folder contains the Controllers of the application.
-

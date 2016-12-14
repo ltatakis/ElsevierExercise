@@ -33,6 +33,6 @@ To run and test the following application:
 
 3) Then you need to copy the dependency file generated into the app folder (todo this should be done automatically).
 
-4) To run development run `npm start' in parent directory, and it will appear at `http://localhost:8000/index.html`
+4) To run development run `npm start` in parent directory, and it will appear at `http://localhost:8000/index.html`
 
 ## Code Structure

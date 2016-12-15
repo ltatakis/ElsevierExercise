@@ -9,6 +9,28 @@ __Features:__
 - The ability to search for a product based on product title
 - Sort products alphabetically or by date of publication.
 
+
+## Code Structure
+This [Angular](https://angularjs.org/) app uses an [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern.
+
+__File structure:__
+- `bower.json`: Contains the dependencies of the application.
+
+- `package.json`: Contains the commands that `npm` needs to do prior to running in development mode.
+
+- `bower_components`: The folder generated after the commands `npm install` or `npm start` are run. It contains all dependencies of the application.
+
+- `app/index.html` :  The View of the application. (For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages).
+
+- `app/data` : This folder represents the Model of the application, and contains the data which is used.
+
+- `app/js` : The folder contains all javascript files developed for this application.
+
+- `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json).
+
+- `app/js/controllers`: This folder contains the application Controllers.
+
+
 ## Running
 
 
@@ -76,24 +98,4 @@ To run and test the following application:
 2) Then we need to copy the dependency file generated into the `app` folder (todo this should be done automatically).
 
 3) To run development run `npm start` in parent directory, and it will appear at `http://localhost:8000/index.html`
-
-## Code Structure
-This [Angular](https://angularjs.org/) app uses an [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern.
-
-__File structure:__
-- `bower.json`: Contains the dependencies of the application.
-
-- `package.json`: Contains the commands that `npm` needs to do prior to running in development mode.
-
-- `bower_components`: The folder generated after the commands `npm install` or `npm start` are run. It contains all dependencies of the application.
-
-- `app/index.html` :  The View of the application. (For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages).
-
-- `app/data` : This folder represents the Model of the application, and contains the data which is used.
-
-- `app/js` : The folder contains all javascript files developed for this application.
-
-- `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json).
-
-- `app/js/controllers`: This folder contains the application Controllers.
 

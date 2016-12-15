@@ -93,7 +93,7 @@ __File structure:__
 
 - `app/js` : The folder contains all javascript files developed for this application.
 
-- `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json)
+- `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json).
 
 - `app/js/controllers`: This folder contains the application Controllers.
 

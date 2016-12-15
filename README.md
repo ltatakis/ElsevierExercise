@@ -6,7 +6,7 @@ This application was created for a coding exercise by Elsevier, using the JSON g
 __Features:__
 
 - A display of all the product titles.
-- The ability to search for a product based on product title
+- The ability to search for a product based on product title.
 - Sort products alphabetically or by date of publication.
 
 
@@ -14,23 +14,23 @@ __Features:__
 This [Angular](https://angularjs.org/) app uses an [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern.
 
 __File structure:__
-- `bower.json`: Contains the dependencies of the application.
+- `bower.json`: contains the dependencies of the application.
 
-- `package.json`: Contains the commands that `npm` needs to do prior to running in development mode.
+- `package.json`: contains the commands that `npm` needs to do prior to running in development mode.
 
-- `bower_components`: The folder generated after the commands `npm install` or `npm start` are run. It contains all dependencies of the application.
+- `bower_components`: is the folder generated after the commands `npm install` or `npm start` are run. It contains all dependencies of the application.
 
-- `app/index.html` :  The View of the application. (For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages).
+- `app/index.html` :  is the View of the application. (For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages).
 
-- `app/data` : This folder represents the Model of the application, and contains the data which is used.
+- `app/data` : is the folder representing the Model of the application, and contains the data which is used.
 
-- `app/js` : The folder contains all javascript files developed for this application.
+- `app/js` : is the folder containing all javascript files developed for this application.
 
-- `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json).
+- `app/js/services`: contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json).
 
-- `app/js/controllers`: This folder contains the application Controllers.
+- `app/js/controllers`: contains the application Controllers.
 
-
+	
 ## Running
 
 

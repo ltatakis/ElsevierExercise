@@ -21,8 +21,6 @@ Given the setup of the server and the ports chosen the app will appear at: `http
 
 Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js` due to the nature of thi deployment. 
 
-### TODO add the code needed to be added for the release to aws
-
 #### IP table
 Allow incoming calls to AWS instance:
 ```
@@ -56,7 +54,7 @@ cd apache-tomcat-8.5.9/bin/
 ```
 We see that the code does not work correctly giving `Failed to load resource: the server responded with a status of 404 ()` exception. So we go into `cd ../webapps/app/js` and change `/webapps/app/js/services/services.js` to 
 
-```
+```javascript
 var jsonService = angular.module('jsonService', ['ngResource'])
     .factory('jsonService', function ($resource) {
         // This url might need changing for deployment
@@ -66,6 +64,8 @@ var jsonService = angular.module('jsonService', ['ngResource'])
     });
 ```
 and start tomcat server again.
+
+The result can be found on: http://35.162.28.152/app/
 
 ### Development mode using Node.js.
 
@@ -98,3 +98,4 @@ __File structure:__
 - `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json)
 
 - `app/js/controllers`: This folder contains the Controllers of the application.
+

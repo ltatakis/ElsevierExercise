@@ -19,7 +19,7 @@ For the deployment of this application, we copy the app folder into the webapps 
 We start the tomcat server by running `./catalina.sh start` found in the `tomcat/bin` folder.
 Given the setup of the server and the ports chosen the app will appear at: `http://example.com:port/app`
 
-Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js`, we show how to deal with this in section [deploy code](https://github.com/ltatakis/ElsevierExercise#deploy-code).
+Notes: There might be issues with the application not finding the data file, defined in `app/data`, we show how to deal with this in section [deploy code](https://github.com/ltatakis/ElsevierExercise#deploy-code).
 
 #### IP table
 Allow incoming calls to AWS instance:
@@ -37,7 +37,7 @@ tar -xvf apache-tomcat-8.5.9.tar.gz
 
 git clone https://github.com/ltatakis/ElsevierExercise.git
 ````
-We also need to add the dependencies file by running `npm install` in the ElsevierExercise directory.
+We also add the dependencies of the application, by running `npm install` in the ElsevierExercise parent directory.
 
 #### Move app code to webapps
 
@@ -52,7 +52,7 @@ mv ElsevierExercise/bower_components/ apache-tomcat-8.5.9/webapps/app/.
 cd apache-tomcat-8.5.9/bin/
 ./catalina.sh start
 ```
-We see that the code does not work correctly giving `Failed to load resource: the server responded with a status of 404 ()` exception. So we go into `cd ../webapps/app/js` and change `/webapps/app/js/services/services.js` to 
+We see that the code does not work correctly giving `Failed to load resource: the server responded with a status of 404 ()` exception. So we go to `/webapps/app/js` and change `services/services.js` to 
 
 ```javascript
 var jsonService = angular.module('jsonService', ['ngResource'])
@@ -63,7 +63,7 @@ var jsonService = angular.module('jsonService', ['ngResource'])
         });
     });
 ```
-and start tomcat server again.
+and then start tomcat server again.
 
 The result can be found on: http://35.162.28.152/app/
 

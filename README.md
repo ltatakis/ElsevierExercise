@@ -95,7 +95,7 @@ To run and test the following application:
 
 1) You run `npm install` to retrieve all dependencies in the parent directory (where package.json and bower.json live).
 
-2) Then we need to copy the dependency file generated into the `app` folder (this should be done automatically at later atages).
+2) Then we need to copy the dependency file generated into the `app` folder (this should be done automatically at later stages).
 
 3) To run development, run `npm start` in parent directory, and it will appear at `http://localhost:8000/index.html`
 

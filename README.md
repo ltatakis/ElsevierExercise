@@ -19,7 +19,7 @@ For the deployment of this application, we copy the app folder into the webapps 
 We start the tomcat server by running `./catalina.sh start` found in the `tomcat/bin` folder.
 Given the setup of the server and the ports chosen the app will appear at: `http://example.com:port/app`
 
-Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js`, we show how to deal with this in section [deploy code](# deploy code).
+Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js`, we show how to deal with this in section [deploy code](https://github.com/ltatakis/ElsevierExercise#deploy-code).
 
 #### IP table
 Allow incoming calls to AWS instance:

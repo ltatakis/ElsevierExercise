@@ -19,7 +19,7 @@ For the deployment of this application, we copy the app folder into the webapps 
 We start the tomcat server by running `./catalina.sh start` found in the `tomcat/bin` folder.
 Given the setup of the server and the ports chosen the app will appear at: `http://example.com:port/app`
 
-Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js` due to the nature of thi deployment. 
+Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js`, we show how to deal with this in section [Deploy code](#### Deploy code).
 
 #### IP table
 Allow incoming calls to AWS instance:
@@ -46,7 +46,7 @@ mv ElsevierExercise/app apache-tomcat-8.5.9/webapps/.
 mv ElsevierExercise/bower_components/ apache-tomcat-8.5.9/webapps/app/.
 ```
 
-#### Start code and check
+#### Deploy code
 
 ```
 cd apache-tomcat-8.5.9/bin/

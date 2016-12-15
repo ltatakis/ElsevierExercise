@@ -21,9 +21,54 @@ Given the setup of the server and the ports chosen the app will appear at: `http
 
 Notes: There might be issues with the application not finding the data file, defined in `js/services/services.js` due to the nature of thi deployment. 
 
-### TODO 
+### TODO add the code needed to be added for the release to aws
+
+#### IP table
+Allow incoming calls to AWS instance:
+```
+iptables -A INPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+```
+This also needs to be reflected in AWS : Security Groups -> Inbound Traffic.
+Ports recommended to keep are: 80 (HTTP), 8080 (Custom TPC) and 22 (SSH).
+
+#### Download tomcat and github code
+
+```
+wget http://apache.forthnet.gr/tomcat/tomcat-8/v8.5.9/bin/apache-tomcat-8.5.9.tar.gz
+tar -xvf apache-tomcat-8.5.9.tar.gz
 
 
+git clone https://github.com/ltatakis/ElsevierExercise.git
+````
+We also need to add the dependencies file by running `npm install` in the ElsevierExercise directory.
+
+#### Move app code to webapps
+
+```
+mv ElsevierExercise/app apache-tomcat-8.5.9/webapps/.
+mv ElsevierExercise/bower_components/ apache-tomcat-8.5.9/webapps/app/.
+
+```
+
+#### Start code and check
+
+```
+cd apache-tomcat-8.5.9/bin/
+ ./catalina.sh start
+```
+We see that the code does not work correctly giving `Failed to load resource: the server responded with a status of 404 ()` exception. So we go into `cd ../webapps/app/js` and change `/webapps/app/js/services/services.js` to 
+
+```
+var jsonService = angular.module('jsonService', ['ngResource'])
+    .factory('jsonService', function ($resource) {
+        // This url might need changing for deployment
+                        return $resource('/app/data/ELSIO-Graph-Example.json', {}, {
+                   query: {method:'GET'}
+        });
+    });
+```
+and start tomcat server again.
 
 ### Development mode using Node.js.
 

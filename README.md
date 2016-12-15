@@ -87,13 +87,13 @@ __File structure:__
 
 - `bower_components`: The folder generated after the commands `npm install` or `npm start` are run. It contains all dependencies of the application.
 
-- `app/index.html` : Starting page of the application, the View of the application. For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages.
+- `app/index.html` :  The View of the application. (For future expansion use [angular multiple views](https://docs.angularjs.org/tutorial/step_09) to allow the dynamic changing of the pages).
 
-- `app/data` : This folder represents the Model of the application. It contains the data that are used in the application.
+- `app/data` : This folder represents the Model of the application, and contains the data which is used.
 
-- `app/js` : The folder containing all javascript files we develop for this application.
+- `app/js` : The folder contains all javascript files developed for this application.
 
 - `app/js/services`: Contains the services that receive data from: APIS, files, other URLS etc. We use the `services.js` to call [ELSIO-Graph-Example](https://github.com/ltatakis/ElsevierExercise/blob/master/app/data/ELSIO-Graph-Example.json)
 
-- `app/js/controllers`: This folder contains the Controllers of the application.
+- `app/js/controllers`: This folder contains the application Controllers.
 

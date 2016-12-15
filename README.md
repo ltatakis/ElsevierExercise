@@ -27,7 +27,7 @@ Allow incoming calls to AWS instance:
 iptables -A INPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 ```
 This also needs to be reflected in AWS : Security Groups -> Inbound Traffic.
-Ports recommended to keep are: 80 (HTTP), 8080 (Custom TPC) and 22 (SSH).
+Ports recommended to keep open are: 80 (HTTP), 8080 (Custom TPC) and 22 (SSH).
 
 #### Download tomcat and github code
 
@@ -71,13 +71,11 @@ The result can be found on: http://35.162.28.152/app/
 
 To run and test the following application:
 
-1) You run npm to install all dependencies and run in development mode.
+1) You run `npm install` to retrieve all dependencies in the parent directory (where package.json and bower.json live).
 
-2) To retrieve all dependencies run `npm install` in the parent directory (where package.json and bower.json live).
+2) Then we need to copy the dependency file generated into the `app` folder (todo this should be done automatically).
 
-3) Then you need to copy the dependency file generated into the app folder (todo this should be done automatically).
-
-4) To run development run `npm start` in parent directory, and it will appear at `http://localhost:8000/index.html`
+3) To run development run `npm start` in parent directory, and it will appear at `http://localhost:8000/index.html`
 
 ## Code Structure
 This [Angular](https://angularjs.org/) app uses an [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern.
